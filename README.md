@@ -3,4 +3,6 @@ small bash shell scrip for deploy instantiate and optimize smart contracts on co
 
 ``` 
 git clone https://github.com/sukrit1234/cosmwasm-tool-bash tools
+cd ./tools
+./init.sh
 ``` 
