@@ -80,9 +80,9 @@ if WALLET_ADDRESS=$(wasmd keys show -a $2); then
    INSTANT_ARGS+=$TOKEN_NAME
    INSTANT_ARGS+='","symbol":"'
    INSTANT_ARGS+=$TOKEN_SYMBOL
-   INSTANT_ARGS+='","max_supply":'
+   INSTANT_ARGS+='","max_supply":"'
    INSTANT_ARGS+=$MAX_SUPPLY
-   INSTANT_ARGS+='}'
+   INSTANT_ARGS+='"}'
 
    if INIT_ARGS_JSON=$(jq -n --arg wallet $WALLET_ADDRESS "$INSTANT_ARGS"); then
       echo "About to instantiating the contract.. for CODE_ID : " $1 " WITH ADDRESS : " $WALLET_ADDRESS
